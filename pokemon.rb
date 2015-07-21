@@ -8,29 +8,5 @@ require_relative 'Game'
 game = Game.new
 
 
-=begin
-squirtle = Squirtle.new
-puts squirtle.hp
-# => 100
-
-bulbasaur = Bulbasaur.new
-puts bulbasaur.hp
-
-
-squirtle.attack(bulbasaur)
-
-puts bulbasaur.hp
-# => 90
-puts squirtle.hp
-# => 100
-
-bulbasaur.attack(squirtle)
-
-puts bulbasaur.hp
-# => 90
-puts squirtle.hp
-# => 80
-=end
-
-#how do i make enums?
+#how do i make enums? can use Symbols with : notation
 #block comments http://stackoverflow.com/questions/2989762/multi-line-comments-in-ruby

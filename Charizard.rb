@@ -7,9 +7,9 @@ class Charizard < Pokemon
   
   def attack(enemy)
     if enemy.type == :grass
-      healthCalculator(@strength * 2, enemy)
+      @calculator.Calculate(@strength * 2, enemy)
     else
-       healthCalculator(@strength, enemy)
+      @calculator.Calculate(@strength, enemy)
     end
   end
 end

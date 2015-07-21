@@ -6,6 +6,7 @@ class Pokemon
     @type = type
     @hp = hp
     @strength = strength
+    @calculator = HealthCalculator.new
   end
   
   def name
@@ -31,11 +32,13 @@ class Pokemon
 end
 
 
-#global function
-def healthCalculator(damageToOpponent, opponent)
-      if opponent.hp - damageToOpponent < 0
-        opponent.hp = 0
-      else
-        opponent.hp = opponent.hp - damageToOpponent
-      end
+class HealthCalculator
+  
+  def Calculate(damageToOpponent, opponent)
+        if opponent.hp - damageToOpponent < 0
+          opponent.hp = 0
+        else
+          opponent.hp = opponent.hp - damageToOpponent
+        end
+  end
 end

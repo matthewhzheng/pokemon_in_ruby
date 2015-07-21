@@ -121,17 +121,19 @@ describe Bulbasaur do
   end
 end
 
-describe "healthCalculator" do
+describe HealthCalculator do
+  let(:healthCalculator) { described_class.new }
+  
   it "reduces hp by damange input" do
     charizard = Charizard.new
     charizard.hp = 90
-    healthCalculator(10, charizard)
+    healthCalculator.Calculate(10, charizard)
     expect(charizard.hp).to eq(80)
   end
   it "can't be negative" do
     charizard = Charizard.new
     charizard.hp = 10
-    healthCalculator(20, charizard)
+    healthCalculator.Calculate(20, charizard)
     expect(charizard.hp).to eq(-0)      
   end
 end
